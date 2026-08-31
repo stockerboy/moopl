@@ -183,3 +183,5 @@ td:first-child { color: var(--ink); font-weight: 500; }
   .tease { padding: 64px 0 44px; }
   .sec { padding: 44px 0; }
 }
+
+@media print { * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } .casebar { position: static; } }

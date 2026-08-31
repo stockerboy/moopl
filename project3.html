@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FILE 03 · AI 돌봄로봇 휴(休) — 장민서 포트폴리오</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="casebar"><div class="wrap">
+  <a class="who" href="index.html">MINSEO.file</a>
+  <nav>
+    <a href="index.html">개요</a>
+    <a href="project1.html">FILE 01 · 보험 AI</a>
+    <a href="project2.html">FILE 02 · 자기계발</a>
+    <a class="now" href="project3.html">FILE 03 · 돌봄로봇</a>
+    <a href="project4.html">FILE 04 · 공기질</a>
+    <a href="closing.html">최종 진술</a>
+  </nav>
+</div></header>
+
+<!-- ===== 떡밥 히어로 ===== -->
+<section class="tease"><div class="wrap">
+  <div class="file-tag"><b>FILE 03</b> — LG DX SCHOOL · AI 돌봄로봇 휴(休) · 기획 리드 · <span class="mono" style="color:var(--hot)">UNAWARDED</span></div>
+  <h1>이 프로젝트는<br><span class="mark">상을 받지 못했습니다.</span></h1>
+  <p class="sub">그런데도 포트폴리오 한가운데에 놓았습니다. 사용자의 문제를 데이터와 현장 양쪽으로 증명하고도 심사에서 진 이유 — “그래서 누가 돈을 내는가”를 설계하지 못한 실패의 기록이, 이후 모든 기획의 출발점이 됐기 때문입니다.</p>
+</div></section>
+
+<!-- ===== 발단: 요양원에서 직접 일했다 ===== -->
+<section class="sec"><div class="wrap">
+  <div class="k acc">EXHIBIT A — 이 기획자, 요양원에서 일했다</div>
+  <h2>현장을 관찰한 게 아니라, 현장에 있었습니다.</h2>
+  <p>요양원에서 <strong>직접 근무하며</strong> 요양보호사 선생님들이 무엇 때문에 지치는지 가까이서 봤습니다. 데스크 리서치로는 절대 보이지 않는 장면 — 감정노동에 소모되는 하루하루가 눈앞에 있었습니다.</p>
+  <p>하지만 여기서 이 파일의 첫 번째 판단이 나옵니다. <strong>“내 경험 하나는 근거가 되지 못한다.”</strong> 목격담을 기획의 출발점으로 삼는 대신, 팀에 커뮤니티 리뷰 크롤링과 LDA 분석을 제안하고 직접 이끌었습니다. 그리고 그 결과를 다시 현장 인터뷰로 교차 검증했습니다. 경험 → 데이터 → 현장, 같은 문제를 세 번 확인한 뒤에야 기획을 시작했습니다.</p>
+</div></section>
+
+<!-- ===== 데이터 검증 ===== -->
+<section class="sec"><div class="wrap">
+  <div class="k">EXHIBIT B — 데이터로 두 번 더 확인하다</div>
+  <h2>‘사람이 부족하다’는 뉴스와, 데이터가 말한 진짜 이유는 달랐습니다.</h2>
+
+  <div class="cards">
+    <div class="card"><div class="big cool">4,061건</div><div class="cap">수집한 유튜브 댓글. 요양보호사 커뮤니티·요양 전문 뉴스·협회 게시판과 함께 수집·전처리 후 군집화.</div></div>
+    <div class="card"><div class="big cool">28,496 / 35,492</div><div class="cap">크롤링한 두 요양보호사 커뮤니티의 회원 수. 개인 경험이 아닌 집단의 목소리를 근거로 삼았습니다.</div></div>
+    <div class="card"><div class="big acc">5개</div><div class="cap">군집화로 도출한 문제 유형. TF-IDF 상위어로 각 군집을 라벨링했습니다.</div></div>
+  </div>
+
+  <ol class="steps">
+    <li><b>크롤링 · LDA 제안과 주도</b><span>커뮤니티, 뉴스, 협회 게시판, 유튜브 댓글 4,061건을 수집·전처리 후 군집화 — 5개 문제 유형 도출.</span></li>
+    <li><b>중요도 × 만족도 매트릭스</b><span>Actor별 Action을 두 축에 놓고, 중요한데 충족되지 않은 Underserved 영역의 <strong>‘감정노동에 노출된 요양보호사’</strong>를 타깃으로 선정.</span></li>
+    <li><b>현장 인터뷰로 교차 검증</b><span>2024.08.10, 요양원 재직 팀장·시설장·요양보호사 인터뷰. 데이터가 가리킨 ‘감정노동’이 현장에서도 1순위 회피 업무로 확인됐습니다.</span></li>
+  </ol>
+
+  <p>데이터가 방향을 잡고, 인터뷰가 그 방향이 맞는지 확인하는 순서 — 요양원에서 본 장면을 <strong>두 번 더</strong> 검증한 뒤에야 문제라고 불렀습니다.</p>
+</div></section>
+
+<!-- ===== 현장의 목소리 ===== -->
+<section class="sec"><div class="wrap">
+  <div class="k acc">TESTIMONY — 2024.08.10 현장 인터뷰</div>
+  <h2>데이터의 군집명 뒤에는, 이런 문장들이 있었습니다.</h2>
+
+  <div class="voice">
+    <q>폭력적인 어르신들을 다룰 때, 저희가 가장 대하기 어려워요. 감정이 상하기 때문에… 알고 대응을 하지만, 어떨 때는 우리가 뭘 잘못했길래 이렇게까지 하실까 하죠.</q>
+    <span class="src">— 요양원 재직 요양보호사 · 현장 인터뷰 2024.08.10</span>
+  </div>
+
+  <div class="voice">
+    <q>어르신들이 치매로 어르신들이 많아요. 그러다 보니까 우리가 열심히 약 도와드리려고 노력은 하는데, 어르신들이 과격하게 욕설이라든지 뭔가를 던지실 때가 있어요.</q>
+    <span class="src">— 요양원 재직 요양보호사 · 현장 인터뷰 2024.08.10</span>
+  </div>
+
+  <p>떠나는 이유는 노동량 그 자체가 아니었습니다. 감정이 상하는 순간을 매일, 혼자, 맨몸으로 받아내야 한다는 것 — 그게 데이터와 현장이 함께 가리킨 문제였습니다.</p>
+</div></section>
+
+<!-- ===== 서비스 설계 ===== -->
+<section class="sec"><div class="wrap">
+  <div class="k">BLUEPRINT — 로봇이 대신 듣고, 대시보드가 대신 기억한다</div>
+  <h2>AI 돌봄로봇 ‘휴(休)’ — 보호사를 부르는 건, 마지막 수단입니다.</h2>
+  <p>로봇 ‘휴(休)’는 아침·저녁 정기 대화로 어르신 상태를 체크하고, 반복적인 말하기·폭언을 감지해 평소 취향을 반영한 맞춤 대응을 수행합니다. 반복 질문과 폭언 상황을 <strong>대응 메뉴얼 10가지</strong>로 1차 대응하고, 모든 방법이 실패했을 때만 요양보호사를 호출합니다.</p>
+  <p>그 과정에서 쌓인 대화 · 감정 · 폭언 데이터는 대시보드로 정리됩니다. <strong>‘이 어르신에게는 어떤 방법이 통했는지’</strong>를 다음 근무자가 이어받게 하는 것 — 어르신별 대응 메뉴얼 성공 상위 TOP3, 시간대별 폭언 빈도 그래프, 요양보호사 간 인수인계 사항을 한 화면에 배치했습니다.</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>담당 구분</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>문제 정의 · 타깃 선정</td><td>크롤링·LDA 제안 및 주도, 타깃 Actor 선정</td></tr>
+        <tr><td>인터뷰</td><td>설계 및 진행, 결과의 시나리오 반영</td></tr>
+        <tr><td>시나리오 · 메뉴얼</td><td>로봇 사용 시나리오와 대응 메뉴얼 10종 체계</td></tr>
+        <tr><td>대시보드</td><td>정보 구조 · 화면 구성 · 지표 정의</td></tr>
+        <tr><td class="dim">팀원 담당</td><td class="dim">앱 화면 시안 제작 등</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- ===== 반전: 수상 실패 해부 ===== -->
+<section class="sec"><div class="wrap">
+  <div class="k hot">VERDICT — 그런데 왜 상을 못 받았나</div>
+  <h2>사용자의 문제는 증명했습니다.<br>그런데 한 가지 질문을 빼먹었습니다.</h2>
+
+  <div class="twist">
+    <div class="k hot">회고 — 자기 해부</div>
+    <h3>“그래서, 누가 돈을 내는가?”</h3>
+    <p>사용자의 문제는 데이터와 현장 양쪽으로 증명했지만, 이 질문을 설계하지 못했습니다. 요양시설의 구매결정권자는 <strong>원장</strong>이고, 그들이 보는 지표는 ‘보호사의 정서’가 아니라 <strong>인력 유지율과 안전사고 발생률</strong>이었습니다. 그런데 저는 사용자(요양보호사)의 언어로만 제안서를 썼습니다. 사용자 가치와 구매자 가치는 따로 설계해야 한다는 걸, 이 프로젝트에서 배웠습니다.</p>
+  </div>
+
+  <div class="voice hot">
+    <q>이후 보험 프로젝트에서 기대효과를 고객 · 설계사 · 회사 세 관점으로 나눠 쓴 것은, 이때의 실패 때문입니다.</q>
+    <span class="src">— FILE 01 · 보험 AI 파일과 이 파일을 잇는 연결고리</span>
+  </div>
+
+  <p>이 파일이 여기 놓인 이유입니다. 수상 실적이 아니라, <strong>실패의 원인을 정확히 지목하고 다음 프로젝트의 설계를 바꾼 기록</strong>이기 때문입니다.</p>
+</div></section>
+
+<!-- ===== 다음 화 예고 ===== -->
+<section class="nextbait wrap">
+  <div class="k">FILE 04 — 계속 보기</div>
+  <a href="project4.html"><div class="q">가족의 기침 소리에서 시작해, 6팀 중 1위로 끝난 파일.</div><div class="go">→ Fresh Way 공기질 파일 열기</div></a>
+</section>
+
+</body>
+</html>
