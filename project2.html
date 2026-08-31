@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FILE 02 · AI 기반 자기계발 앱 — 장민서</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="casebar"><div class="wrap">
+  <a class="who" href="index.html">MINSEO.file</a>
+  <nav>
+    <a href="index.html">개요</a>
+    <a href="project1.html">FILE 01 · 보험 AI</a>
+    <a class="now" href="project2.html">FILE 02 · 자기계발</a>
+    <a href="project3.html">FILE 03 · 돌봄로봇</a>
+    <a href="project4.html">FILE 04 · 공기질</a>
+    <a href="closing.html">최종 진술</a>
+  </nav>
+</div></header>
+
+<!-- ============ 떡밥 ============ -->
+<section class="tease">
+  <div class="wrap">
+    <div class="file-tag">FILE 02 — <b>AI 기반 자기계발 앱</b> · LG DX School · 기획 리드 · 우수상</div>
+    <h1>모두가 ‘갓생’을 말할 때,<br>저는 <span class="mark">‘번아웃’을 검색</span>했습니다.</h1>
+    <p class="sub">목표는 세우는데 실천을 이어가지 못해 포기하는 일이 반복됐습니다. “나만 그런가?”가 출발점이었고, 유행하는 갓생 문화의 이면에 번아웃이 있을 거라는 가설을 소셜 데이터로 확인했습니다. 느낌을 데이터로 바꾸는 것이 첫 과제였습니다.</p>
+  </div>
+</section>
+
+<!-- ============ 증거 수집 ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="k">EVIDENCE — 소셜 데이터 6,500건</div>
+    <h2>‘갓생’ 옆에 붙어 있는 단어들을 먼저 캤습니다.</h2>
+    <p>검색 키워드부터 <strong>갓생 + 실패일상 · 실패기록 · 강박 · 번아웃 · 자기착취</strong>로 잡았습니다. 화려한 갓생 인증이 아니라, 그 뒤에서 무너지는 기록을 모으기 위해서입니다.</p>
+
+    <div class="cards">
+      <div class="card"><div class="big cool">6,500건</div><div class="cap">네이버 블로그 5,000건 + X 1,500건 크롤링 (광고·홍보글 제거 후 분석)</div></div>
+      <div class="card"><div class="big cool">k = 3</div><div class="cap">doc2vec 벡터를 실루엣 계수로 검증해 군집 수 결정, 덴드로그램으로 클러스터 → Actor 정의</div></div>
+      <div class="card"><div class="big acc">n = 1,282</div><div class="cap">선정 Actor — “갓생 문화로 번아웃을 겪지만 여전히 갓생을 놓을 수 없는 사람”</div></div>
+    </div>
+
+    <ol class="steps">
+      <li><b>키워드 선정 &amp; 크롤링</b><span>갓생 + 실패일상 · 실패기록 · 강박 · 번아웃 · 자기착취 — 네이버 블로그 5,000건 / X 1,500건</span></li>
+      <li><b>전처리 &amp; 벡터화</b><span>광고·홍보글 제거 → Okt 형태소 분리 → 명사·형용사·동사 추출 → doc2vec</span></li>
+      <li><b>군집화 (n=3)</b><span>실루엣 계수로 k 결정 → 덴드로그램으로 클러스터를 Actor로 정의</span></li>
+      <li><b>Actor별 LDA · TF-IDF</b><span>각 Actor의 Action과 언어를 확인하고, 원문(Social Voice)과 대조</span></li>
+      <li><b>집중 Actor 선정</b><span>기회영역 기준 우선순위 도출 → 페르소나 구체화</span></li>
+    </ol>
+
+    <p>선정한 Actor(n=1,282)의 TF-IDF 상위어는 <strong>갓생 · 실패 · 일상 · 번아웃 · 기록 · 강박</strong>이었습니다. 통계 위에서 멈추지 않고 원문으로 내려가 확인했습니다.</p>
+
+    <div class="voice">
+      <q>의지는 있지만 과도한 목표 추구로 번아웃을 반복한다</q>
+      <span class="src">SOCIAL VOICE — 클러스터 원문 대조에서 확인한 목소리</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 페르소나 · 인사이트 ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="k acc">PERSONA — 데이터로 만든 인물</div>
+    <h2>‘김새로’는 상상해서 만든 인물이 아닙니다.</h2>
+    <p><strong>번아웃으로 휴학했지만, 열심히 사는 친구들과 자신을 비교하며 편히 쉬지 못하는 23세 대학생.</strong> 클러스터의 언어를 그대로 옮긴 정의입니다.</p>
+    <p>여기서 얻은 인사이트 — 문제는 <strong>‘게을러서 못 한다’가 아니라, 획일적인 갓생 기준에 자신을 맞추다 지친다</strong>는 것이었습니다. 그래서 서비스 방향을 ‘더 열심히 하게 만드는 앱’이 아니라 <strong>‘자기 방식대로 지속하게 돕는 앱’</strong>으로 잡았습니다.</p>
+  </div>
+</section>
+
+<!-- ============ 반전: 가설 기각 ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="k hot">TWIST — 가설 기각의 기록</div>
+    <h2>MBTI로 갈릴 줄 알았습니다. 데이터가 아니라고 했습니다.</h2>
+
+    <div class="twist">
+      <div class="k hot">HYPOTHESIS REJECTED</div>
+      <h3>제 가설을, 제 데이터로 죽였습니다.</h3>
+      <p>최초 가설은 <strong>“MBTI 유형에 따라 목표를 달성하는 방식이 다를 것이다”</strong>였습니다. 익숙하고, 사용자에게 설명하기도 쉬운 축이었습니다. 그런데 MBTI별로 텍스트를 나눠 LDA를 돌렸더니 유형 간 유의미한 차이가 나오지 않았습니다. <strong>편했지만 근거가 없어서 버렸습니다.</strong></p>
+    </div>
+
+    <p>가설을 버린 자리에는 문헌을 근거로 목표 달성에 실제로 영향을 주는 축을 다시 골랐습니다 — <strong>실행 성향 × 계획 성향 × 동기 원천</strong>, 세 축의 조합으로 8유형.</p>
+    <p><strong>왜 이 세 축인가</strong> — 내재적 동기를 가진 사람은 자기 주도적으로 목표를 설정할 때, 외재적 동기를 가진 사람은 구체적인 보상 체계가 있을 때 성취도가 높아진다는 심리·행동과학 연구를 근거로 삼았습니다. 성향에 맞지 않는 목표 설정 방식은 오히려 스트레스를 키우고 동기를 약화시킨다는 결과도 함께 확인했습니다. → <strong>“같은 목표라도 사람마다 다른 방식으로 쪼개야 한다”</strong></p>
+  </div>
+</section>
+
+<!-- ============ 8유형 ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="k">REBUILD — 자기계발 성향 8유형 (직접 정의)</div>
+    <h2>축을 다시 짜니, 여덟 개의 얼굴이 나왔습니다.</h2>
+
+    <div class="cards">
+      <div class="card"><div class="big">3축</div><div class="cap">실행 성향 × 계획 성향 × 동기 원천 — 문헌 근거로 재설계한 분류 축</div></div>
+      <div class="card"><div class="big">8유형</div><div class="cap">세 축의 조합으로 정의한 자기계발 성향 유형</div></div>
+      <div class="card"><div class="big acc">12문항</div><div class="cap">축당 4문항씩 직접 작성해 온보딩에 배치한 성향 진단</div></div>
+    </div>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>실행 성향</th>
+            <th>P · 내재적 동기</th>
+            <th>P · 외재적 동기</th>
+            <th>J · 내재적 동기</th>
+            <th>J · 외재적 동기</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>부지런</td>
+            <td><strong>자유로운 실천가</strong><br>자유롭게 목표를 개척하며 성취 자체에서 즐거움</td>
+            <td><strong>보상 성취자</strong><br>자유를 추구하되 보상이 있을 때 집중</td>
+            <td><strong>계획적인 성취자</strong><br>체계적 계획 + 스스로 느끼는 성취감</td>
+            <td><strong>성과 지향가</strong><br>체계적 수행 + 외부의 인정과 칭찬</td>
+          </tr>
+          <tr>
+            <td>게으름</td>
+            <td><strong>느긋한 방랑자</strong><br>흥미 있는 일에만 여유롭게 몰입</td>
+            <td><strong>자극 반응자</strong><br>외부 자극이 있을 때 필요한 순간에만 실천</td>
+            <td><strong>느긋한 전략가</strong><br>전략은 세우지만 실행에서는 여유</td>
+            <td><strong>데드라인 수호자</strong><br>외부 기한과 피드백, 외적 압력에서 동기부여</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI 설계 · 결과 ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="k ok">DESIGN &amp; RESULT</div>
+    <h2>AI에게 시킨 건 ‘동기부여’가 아니라, 유형에 맞는 쪼개기입니다.</h2>
+    <p><strong>성향 × 목표를 입력하면 GPT가 세부 실행계획을 생성·관리</strong>합니다. 12문항 진단으로 유형을 먼저 잡아두었기 때문에, 같은 목표라도 사람마다 다른 리듬으로 쪼개집니다. ‘더 열심히’가 아니라 ‘자기 방식대로 지속하게’ — 데이터에서 얻은 방향이 그대로 설계 원칙이 됐습니다.</p>
+
+    <div class="cards">
+      <div class="card"><div class="big ok">우수상</div><div class="cap">LG DX School — 기획 리드로 참여한 결과</div></div>
+      <div class="card"><div class="big hot">1회</div><div class="cap">기각된 가설(MBTI). 버린 기록까지 그대로 남겼습니다 — 틀렸다는 걸 데이터로 먼저 아는 것이 기획이라고 믿기 때문입니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 다음 화 예고 ============ -->
+<section class="nextbait wrap">
+  <div class="k">FILE 03 — 계속 보기</div>
+  <a href="project3.html"><div class="q">수상하지 못한 프로젝트를, 왜 포트폴리오 한가운데 두었을까?</div><div class="go">→ AI 돌봄로봇 '휴' 파일 열기</div></a>
+</section>
+
+</body>
+</html>

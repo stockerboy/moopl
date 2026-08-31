@@ -1,0 +1,185 @@
+/* ============================================================
+   MINSEO JANG — "누구지 이 사람?" Portfolio Design System
+   Concept: Data-Noir Teaser. 어두운 배경 위에 증거(데이터)가
+   스포트라이트처럼 떠오르는 구성. 모든 페이지가 '떡밥 → 증거 → 반전'
+   리듬을 갖는다.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #0b0d10;
+  --bg-raise: #14171c;
+  --bg-card: #191d24;
+  --line: #2a2f38;
+  --ink: #e8eaee;
+  --ink-dim: #9aa3b0;
+  --ink-faint: #5d6675;
+  --accent: #ffd94a;        /* 형광펜 노랑 — 단서 표시용 */
+  --accent-ink: #131313;
+  --hot: #ff5d5d;           /* 실패/기각/반전 */
+  --cool: #5db8ff;          /* 데이터/검증 */
+  --ok: #55d68b;            /* 결과/성공 */
+  --font-sans: 'IBM Plex Sans KR', 'Pretendard', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --maxw: 880px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- 상단 수사파일 네비게이션 ---------- */
+.casebar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(11,13,16,.88); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.casebar .wrap {
+  display: flex; align-items: center; gap: 20px;
+  height: 56px; font-family: var(--font-mono); font-size: 12.5px;
+}
+.casebar .who {
+  color: var(--accent); font-weight: 500; letter-spacing: .08em;
+  text-decoration: none; white-space: nowrap;
+}
+.casebar nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.casebar nav::-webkit-scrollbar { display: none; }
+.casebar nav a {
+  color: var(--ink-faint); text-decoration: none; padding: 6px 10px;
+  border-radius: 6px; white-space: nowrap; transition: color .15s;
+}
+.casebar nav a:hover { color: var(--ink); }
+.casebar nav a.now { color: var(--accent); background: rgba(255,217,74,.08); }
+
+/* ---------- 페이지 히어로: 떡밥 존 ---------- */
+.tease {
+  padding: 96px 0 64px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.tease .file-tag {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .18em;
+  color: var(--ink-faint); text-transform: uppercase; margin-bottom: 20px;
+}
+.tease .file-tag b { color: var(--accent); font-weight: 500; }
+.tease h1 {
+  font-size: clamp(30px, 5.4vw, 52px); line-height: 1.28;
+  font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px;
+}
+.tease h1 .mark { background: linear-gradient(transparent 62%, rgba(255,217,74,.42) 62%); }
+.tease .sub { color: var(--ink-dim); font-size: 18px; max-width: 640px; }
+
+/* ---------- 본문 섹션 ---------- */
+.sec { padding: 56px 0; border-bottom: 1px solid var(--line); }
+.sec:last-of-type { border-bottom: none; }
+.k {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: .18em;
+  color: var(--cool); text-transform: uppercase; margin-bottom: 14px;
+}
+.k.hot { color: var(--hot); } .k.ok { color: var(--ok); } .k.acc { color: var(--accent); }
+.sec h2 { font-size: clamp(22px, 3.4vw, 30px); line-height: 1.4; margin: 0 0 16px; letter-spacing: -0.01em; }
+.sec p { color: var(--ink-dim); max-width: 700px; }
+.sec p strong, .sec li strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- 증거 카드 ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 28px 0; }
+.card {
+  background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 22px 20px;
+}
+.card .big {
+  font-family: var(--font-mono); font-size: clamp(30px, 4.5vw, 44px);
+  font-weight: 500; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em;
+}
+.card .big.acc { color: var(--accent); } .card .big.hot { color: var(--hot); }
+.card .big.cool { color: var(--cool); } .card .big.ok { color: var(--ok); }
+.card .cap { color: var(--ink-faint); font-size: 13.5px; margin-top: 10px; line-height: 1.55; }
+
+/* ---------- 인용: 결정적 한 줄 ---------- */
+.voice {
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, rgba(255,217,74,.05), transparent 70%);
+  padding: 20px 24px; margin: 28px 0; border-radius: 0 12px 12px 0;
+}
+.voice q { font-size: 17.5px; color: var(--ink); quotes: '“' '”'; line-height: 1.7; }
+.voice .src { display: block; margin-top: 12px; font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+.voice.hot { border-color: var(--hot); background: linear-gradient(90deg, rgba(255,93,93,.06), transparent 70%); }
+
+/* ---------- 프로세스 타임라인 ---------- */
+.steps { list-style: none; margin: 28px 0; padding: 0; counter-reset: s; }
+.steps li {
+  counter-increment: s; position: relative;
+  padding: 0 0 26px 52px; border-left: 1px solid var(--line); margin-left: 17px;
+}
+.steps li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.steps li::before {
+  content: counter(s, decimal-leading-zero);
+  position: absolute; left: -17px; top: 0;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--bg-raise); border: 1px solid var(--line);
+  color: var(--accent); font-family: var(--font-mono); font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.steps li b { display: block; color: var(--ink); font-size: 16.5px; margin-bottom: 4px; }
+.steps li span { color: var(--ink-dim); font-size: 14.5px; }
+
+/* ---------- 반전/고백 블록 ---------- */
+.twist {
+  background: var(--bg-raise); border: 1px solid var(--line);
+  border-radius: 16px; padding: 30px 28px; margin: 32px 0;
+  position: relative; overflow: hidden;
+}
+.twist::before {
+  content: ''; position: absolute; inset: 0 auto 0 0; width: 4px;
+  background: var(--hot);
+}
+.twist .k { margin-bottom: 10px; }
+.twist h3 { margin: 0 0 10px; font-size: 20px; }
+.twist p { margin: 0; }
+
+/* ---------- 표 ---------- */
+.tbl-scroll { overflow-x: auto; margin: 28px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 560px; }
+th { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+td { padding: 12px 14px; border-bottom: 1px solid var(--line); color: var(--ink-dim); vertical-align: top; }
+td:first-child { color: var(--ink); font-weight: 500; }
+
+/* ---------- 다음 화 예고 푸터 ---------- */
+.nextbait {
+  padding: 72px 0 96px; text-align: left;
+}
+.nextbait .k { color: var(--ink-faint); }
+.nextbait a {
+  display: block; text-decoration: none; color: var(--ink);
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 28px; transition: border-color .2s, transform .2s;
+}
+.nextbait a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.nextbait .q { font-size: clamp(19px, 3vw, 24px); font-weight: 600; line-height: 1.5; }
+.nextbait .go { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin-top: 14px; }
+
+/* ---------- 유틸 ---------- */
+.mono { font-family: var(--font-mono); }
+.dim { color: var(--ink-faint); }
+.redact {
+  background: var(--ink); color: var(--ink); border-radius: 3px;
+  transition: background .3s, color .3s; cursor: pointer;
+}
+.redact:hover { background: rgba(255,217,74,.25); color: var(--ink); }
+
+@media (max-width: 640px) {
+  .tease { padding: 64px 0 44px; }
+  .sec { padding: 44px 0; }
+}

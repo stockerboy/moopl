@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FILE 01 · 보험 AI — AI 고객 라이프 시나리오 설계 Agent</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="casebar"><div class="wrap">
+  <a class="who" href="index.html">MINSEO.file</a>
+  <nav>
+    <a href="index.html">개요</a>
+    <a class="now" href="project1.html">FILE 01 · 보험 AI</a>
+    <a href="project2.html">FILE 02 · 자기계발</a>
+    <a href="project3.html">FILE 03 · 돌봄로봇</a>
+    <a href="project4.html">FILE 04 · 공기질</a>
+    <a href="closing.html">최종 진술</a>
+  </nav>
+</div></header>
+
+<!-- ========== 떡밥: 히어로 ========== -->
+<section class="tease">
+  <div class="wrap">
+    <div class="file-tag"><b>FILE 01</b> — KB라이프 AX 인턴 과제 · 단독 기획 · 임원 PT</div>
+    <h1>혼자서, 인턴이,<br>임원 PT장에서 <span class="mark">보험 설계를 다시 설계했다.</span></h1>
+    <p class="sub">
+      직접 가입 설계를 받아보니 건강보험 특약만 <strong>107개</strong>.
+      무엇이 나에게 필요한지 판단할 수 없었다. 보험은 미래를 대비하는 상품인데,
+      설계는 ‘오늘’만 보고 있었다 — 이게 나만의 불편일까? 여기서 수사가 시작된다.
+    </p>
+  </div>
+</section>
+
+<!-- ========== 의문 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k">Q — 의문</div>
+  <h2>특약 107개 앞에서, 고객은 무엇을 근거로 고르는가.</h2>
+  <p>
+    KB라이프 인턴 AX 과제. 팀이 아니라 <strong>혼자 기획했다</strong>.
+    개인의 불편 하나로 서비스를 만들 수는 없으니,
+    고객(수요)과 설계사(공급) <strong>양쪽을 각각 검증</strong>하는 것부터 시작했다.
+  </p>
+  <div class="cards">
+    <div class="card">
+      <div class="big acc">107개</div>
+      <div class="cap">직접 가입 설계를 받았을 때 마주한 건강보험 특약 수. 판단 불가능의 출발점.</div>
+    </div>
+    <div class="card">
+      <div class="big">1명</div>
+      <div class="cap">기획 인원. 설문 설계부터 인터뷰, 구조 설계, 프로토타입, 임원 PT까지 단독 수행.</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========== 검증 ①: 고객 설문 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k">EVIDENCE 01 — 고객 설문 · n=68 (2026.05.26~27)</div>
+  <h2>“나만 그런가?” — 아니었다. 숫자가 먼저 말했다.</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="big cool">75%</div>
+      <div class="cap">“특약이 너무 많고 복잡하다”</div>
+    </div>
+    <div class="card">
+      <div class="big hot">38.2%</div>
+      <div class="cap">“내 상황에 맞춘 설계라는 느낌이 없다”</div>
+    </div>
+    <div class="card">
+      <div class="big ok">77.9%</div>
+      <div class="cap">AI 맞춤 보장 설계 이용 의향 있음</div>
+    </div>
+  </div>
+  <p>
+    더 결정적인 건 <strong>‘현재의 기준’과 ‘원하는 기준’의 갭</strong>이었다.
+    고객이 원하는 방향과 지금 설계되는 방식이 정반대로 벌어져 있었다.
+  </p>
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th>설계 기준</th><th>갭 (원하는 기준 − 현재 기준)</th><th>해석</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>개인적 특성 고려 (건강·가족구성 등)</td><td class="mono" style="color:var(--ok)">+36.8</td><td>더 원한다 — 지금은 못 받고 있다</td></tr>
+        <tr><td>장기적 재무 적합성</td><td class="mono" style="color:var(--ok)">+33.8</td><td>더 원한다 — 지금은 못 받고 있다</td></tr>
+        <tr><td>일반적인 연령대별 추천 기준</td><td class="mono" style="color:var(--hot)">−25.0</td><td>이제 그만 — 그런데 지금 이렇게 설계된다</td></tr>
+        <tr><td>설계사의 경험에 의한 추천</td><td class="mono" style="color:var(--hot)">−32.4</td><td>이제 그만 — 그런데 지금 이렇게 설계된다</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="dim mono" style="font-size:12.5px">단위 %, 최대 2개 선택 · 자체 설문 (Google Forms, n=68)</p>
+</div></section>
+
+<!-- ========== 검증 ②: 설계사 인터뷰 + 결정적 증언 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k">EVIDENCE 02 — 공급 측 인터뷰</div>
+  <h2>설계사도 만났다. LP는 대면으로, GA는 전화로.</h2>
+  <p>
+    수요만 보고 공급을 빼면 반쪽짜리 기획이 된다.
+    현재 업무 흐름 / 시스템 사용 / AI 지원 기대 / 타사 비교 —
+    <strong>22문항 인터뷰 질문지를 직접 설계</strong>해 LP(대면)·GA(전화) 설계사를 인터뷰했다.
+    공급 측의 불편은 ‘도구가 흩어져 있다’였다.
+  </p>
+  <p>그리고 설문 서술형 응답에서, 이 프로젝트의 방향을 바꾼 한 줄이 나왔다.</p>
+  <div class="voice">
+    <q>설계사분께는 죄송하지만 사적인 이야기를 나누기 조심스러운 부분이 있어서, 오히려 AI라면 마음 편하게 상담할 수 있을 것 같아 기대됩니다.</q>
+    <span class="src">— 고객 설문 서술형 응답 중 · 결정적 증언</span>
+  </div>
+  <p>
+    이 한 줄이 AI의 역할 정의를 바꿨다. AI는 <strong>‘사람을 대체하는 도구’가 아니라
+    사람에게 말하기 어려운 정보를 꺼내는 창구</strong>다.
+    온라인 셀프 설계 채널을 함께 설계한 이유가 여기에 있다.
+  </p>
+</div></section>
+
+<!-- ========== 설계 논리: Agent 구조 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k acc">DESIGN — 구조 설계</div>
+  <h2>하나의 똑똑한 AI 대신, 필요할 때만 부르는 구조.</h2>
+  <p>
+    보장 분석 · 질병 예측 · 보장 설계 · 심사 예측 · 라이프 시나리오는
+    각각 참조하는 데이터와 판단 기준이 다르다. 하나의 모델로 뭉치면 답은 나오지만
+    <strong>“왜 이 설계인가”를 설명할 수 없다</strong>.
+    그래서 기능별 전문 Agent를 나누고, <strong>Control Agent가 상황에 따라 선택 호출</strong>하도록 설계했다.
+  </p>
+  <ol class="steps">
+    <li><b>트리거</b><span>설계사 요청 / 고객 접속 — 트리거만 다르고 그 뒤 구조는 동일. 대면 상담과 온라인 셀프 설계가 같은 엔진을 쓴다.</span></li>
+    <li><b>데이터 통합</b><span>Agent별로 참조 데이터 출처를 명시해 통합. ‘AI가 알아서’로 두지 않았다.</span></li>
+    <li><b>Control Agent 판단</b><span>상황에 따라 어떤 전문 Agent를 부를지 결정한다.</span></li>
+    <li><b>전문 Agent 선택 호출</b><span>보장분석 · 질병예측 · 보장설계 · 심사예측 · 라이프시나리오 — 필요한 것만 부른다.</span></li>
+    <li><b>결과 제공</b><span>고객 언어로 된 설계안과 근거를 함께 제시한다.</span></li>
+    <li><b>피드백 루프</b><span>상담·계약·유지·해지 결과를 다시 학습 데이터로 회수. 1회성 추천이 아니라 추천 정확도가 축적되는 자산.</span></li>
+  </ol>
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th>전문 Agent</th><th>참조 데이터 출처</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>보장 분석</td><td>신용정보원</td></tr>
+        <tr><td>질병 예측</td><td>건보공단 · 심평원</td></tr>
+        <tr><td>심사 예측</td><td>사내 언더라이팅 이력</td></tr>
+        <tr><td>라이프 시나리오</td><td>통계청 · 한국은행 외부 지표</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- ========== 화면 설계 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k acc">SCREEN — 화면 설계</div>
+  <h2>다섯 개를 물어보고, 30년 뒤를 그려주고, 지금 뭘 해야 하는지 말해준다.</h2>
+  <p>
+    보험은 고객이 찾아와서 사는 상품이 아니라 <strong>필요성을 납득시켜야 팔리는 상품</strong>이다.
+    설득의 재료는 말이 아니라 ‘내 미래가 그려진 그림’이어야 한다고 판단했다.
+    화면 구조 · 정보 위계 · 각 영역이 필요로 하는 데이터를 먼저 정의한 뒤 GPT로 프로토타입을 구현했다.
+  </p>
+  <ol class="steps">
+    <li><b>AI 라이프 인터뷰 — 5문항</b><span>보험 용어 대신 ‘목표 · 은퇴 · 가족 · 건강 · 걱정’. 설계의 입력값을 고객 언어로 받는다.</span></li>
+    <li><b>라이프 시나리오 — 설계의 근거를 시각화</b><span>사회초년생 페르소나 기준, 결혼·자녀·가족책임 증가에 따라 보험료가 어떻게 변하는지 타임라인으로 제시. ‘지금 준비해야 하는 이유’를 숫자로 만든다.</span></li>
+    <li><b>맞춤 설계안 — 필요도(%)와 우선순위</b><span>상품을 나열하지 않는다. ‘왜 이 특약인가’를 함께 보여준다.</span></li>
+  </ol>
+  <div class="cards">
+    <div class="card">
+      <div class="big">월 4만원</div>
+      <div class="cap">사회초년생 페르소나의 현재 보험료</div>
+    </div>
+    <div class="card">
+      <div class="big hot">월 22만원</div>
+      <div class="cap">같은 사람의 50세 시점 보험료</div>
+    </div>
+    <div class="card">
+      <div class="big acc">+450%</div>
+      <div class="cap">이 숫자 하나가 ‘지금 준비해야 하는 이유’가 된다</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========== 결과 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k ok">RESULT — 결과</div>
+  <h2>인턴의 단독 과제가 임원 PT장까지 갔다.</h2>
+  <div class="voice">
+    <q>실제 부서가 추진하려는 방향과 맞닿아 있다.</q>
+    <span class="src">— 임원 PT 발표 평가</span>
+  </div>
+  <p>
+    혼자 한 과제였지만 <strong>설계사 인터뷰로 현장 워크플로우를, 고객 설문으로 수요를</strong>
+    각각 확인한 뒤 만들었기 때문에 가능했다.
+    운이 아니라 검증의 순서가 만든 결과다.
+  </p>
+</div></section>
+
+<!-- ========== 반전: 스스로 밝힌 한계 ========== -->
+<section class="sec"><div class="wrap">
+  <div class="k hot">TWIST — 발표에서 스스로 밝힌 것</div>
+  <div class="twist">
+    <div class="k hot">남은 한계</div>
+    <h3>가장 잘 만든 발표에서, 가장 약한 곳을 먼저 말했다.</h3>
+    <p>
+      “심사 예측 Agent가 가장 어렵습니다. 인수 기준은 비공개이고 규제 영역이라,
+      예측이 틀렸을 때 고객에게 잘못된 기대를 주는 위험이 있습니다.
+      실제 적용 시에는 <strong>‘가능성 안내’ 수준으로 범위를 좁히는 게 맞다</strong>고 정리해 발표했습니다.”
+    </p>
+  </div>
+  <p>
+    임원 앞에서 자기 기획의 한계를 스스로 좁혀서 말하는 인턴은 드물다.
+    이 사람의 기획서가 믿음직한 이유는 잘된 부분이 아니라,
+    <strong>안 되는 부분을 먼저 그어놓는 습관</strong>에 있다.
+    그리고 이 습관은 다음 파일에서 더 극적으로 나온다 — 자기 가설을 자기 손으로 기각한 기록.
+  </p>
+</div></section>
+
+<!-- ========== 다음 화 예고 ========== -->
+<section class="nextbait wrap">
+  <div class="k">FILE 02 — 계속 보기</div>
+  <a href="project2.html"><div class="q">MBTI로 가설을 세웠다가, 자기 손으로 기각한 이야기.</div><div class="go">→ 자기계발 앱 파일 열기</div></a>
+</section>
+
+</body>
+</html>

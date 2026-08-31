@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MINSEO.file — 개요</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* 페이지 고유 연출: 파일 카드 링크화 */
+  a.card { display: block; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+  a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  a.card .title { color: var(--ink); font-weight: 600; font-size: 16.5px; margin-top: 10px; line-height: 1.5; }
+  a.card .meta { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .08em; color: var(--ink-faint); margin-top: 4px; }
+  .clue { display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px dashed var(--line); }
+  .clue:last-child { border-bottom: none; }
+  .clue .no { font-family: var(--font-mono); font-size: 12px; color: var(--accent); white-space: nowrap; letter-spacing: .12em; }
+  .clue div p { margin: 6px 0 0; }
+  .clue div b { color: var(--ink); font-size: 16.5px; }
+</style>
+</head>
+<body>
+
+<header class="casebar"><div class="wrap">
+  <a class="who" href="index.html">MINSEO.file</a>
+  <nav>
+    <a class="now" href="index.html">개요</a>
+    <a href="project1.html">FILE 01 · 보험 AI</a>
+    <a href="project2.html">FILE 02 · 자기계발</a>
+    <a href="project3.html">FILE 03 · 돌봄로봇</a>
+    <a href="project4.html">FILE 04 · 공기질</a>
+    <a href="closing.html">최종 진술</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+  <!-- 떡밥 존 -->
+  <section class="tease">
+    <div class="file-tag">CASE FILE · <b>JANG MINSEO</b> · SERVICE PLANNER — 카카오뱅크 AI NATIVE 서비스 기획자 지원</div>
+    <h1>요양원에서 일하던 사람이,<br>어쩌다 보험사 <span class="mark">임원 PT장</span>에 섰을까.</h1>
+    <p class="sub">
+      장민서. 불편을 데이터로 증명하고, AI로 설계까지 끝냅니다.
+      네 개의 프로젝트 전부 같은 순서였습니다 — 주변에서 불편을 발견하고,
+      그게 나만의 착각인지 데이터로 확인하고, 화면과 구조로 옮겼습니다.
+      가설이 깨진 경험과 <span class="redact">설득에 실패한 경험</span>도 그대로 담았습니다.
+    </p>
+  </section>
+
+  <!-- 단서 3가지 -->
+  <section class="sec">
+    <div class="k acc">EVIDENCE — 이 사람에 대해 확인된 세 가지</div>
+    <h2>기획서를 잘 쓰는 사람보다,<br>틀렸다는 걸 먼저 아는 사람이고 싶었다고 진술함.</h2>
+
+    <div class="clue">
+      <span class="no">CLUE 01</span>
+      <div>
+        <b>자기 가설이 데이터로 깨지면, 버린다.</b>
+        <p>MBTI로 사용자가 갈릴 거라 믿었다. LDA를 돌려보니 유의미한 차이가 없었다.
+        편했지만 근거가 없어서 — 축을 통째로 다시 짰다. <span class="mono dim">(FILE 02)</span></p>
+      </div>
+    </div>
+
+    <div class="clue">
+      <span class="no">CLUE 02</span>
+      <div>
+        <b>수상에 실패한 프로젝트를, 숨기는 대신 1순위 교훈으로 쓴다.</b>
+        <p>사용자의 문제는 증명했지만 "누가 돈을 내는가"를 설계하지 못했다.
+        그 실패가 다음 프로젝트에서 기대효과를 세 관점으로 쪼개게 만들었다. <span class="mono dim">(FILE 03)</span></p>
+      </div>
+    </div>
+
+    <div class="clue">
+      <span class="no">CLUE 03</span>
+      <div>
+        <b>AI에게 "만들어줘"라고 하지 않는다.</b>
+        <p>화면 구조 · 정보 위계 · 데이터 출처 · 입출력 요구사항을 먼저 정의한 뒤 AI에 넘긴다.
+        그래서 나온 화면이 왜 그렇게 생겼는지, 본인이 설명할 수 있다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 일하는 방식 -->
+  <section class="sec">
+    <div class="k">M.O. — 네 번 반복된 동일 수법</div>
+    <h2>관찰하고, 깨보고, 남은 것만 화면으로.</h2>
+    <ol class="steps">
+      <li>
+        <b>관찰 — 불편은 늘 주변에 먼저 있었다</b>
+        <span>요양원 근무 중 본 요양보호사의 감정노동, 호흡기 질환 가족이 겪던 공기질 문제,
+        목표를 세워도 실천하지 못하던 자기 자신. 주제는 전부 직접 겪거나 목격한 자리에서 나왔다.</span>
+      </li>
+      <li>
+        <b>검증 — 개인 경험은 근거가 아니다</b>
+        <span>"나만 그런가?"를 확인하기 위해 소셜 데이터 크롤링과 LDA 분석, 설문(n=68),
+        현장 인터뷰를 직접 설계했다. 데이터가 아니라고 하면 가설을 버렸다.</span>
+      </li>
+      <li>
+        <b>설계 — AI는 결과물 생성기가 아니라 도구</b>
+        <span>필요한 화면과 데이터를 먼저 정의한 뒤 AI에 넘겼다.
+        결과물이 아니라 구조를 설계했다.</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 4개 파일 티저 -->
+  <section class="sec">
+    <div class="k acc">CASE FILES — 압수된 프로젝트 4건</div>
+    <h2>네 개의 파일. 결말은 파일 안에 있습니다.</h2>
+    <div class="cards">
+      <a class="card" href="project1.html">
+        <div class="big acc">01</div>
+        <div class="title">특약 107개를 앞에 두고, 이 인턴은 설문부터 돌렸다.</div>
+        <div class="meta">AI 고객 라이프 시나리오 설계 Agent · KB라이프 AX 인턴 · 단독 기획 · 임원 PT</div>
+      </a>
+      <a class="card" href="project2.html">
+        <div class="big cool">02</div>
+        <div class="title">모두가 '갓생'을 말할 때, 이 사람은 '번아웃'을 검색했다.</div>
+        <div class="meta">AI 기반 자기계발 앱 · LG DX School · 기획 리드 · 우수상</div>
+      </a>
+      <a class="card" href="project3.html">
+        <div class="big hot">03</div>
+        <div class="title">상은 못 받았다. 그런데 왜 이 파일이 FILE 01을 만들었을까.</div>
+        <div class="meta">AI 돌봄로봇 '휴(休)' · LG DX School · 기획 리드 · 현장 관찰 → 데이터 검증</div>
+      </a>
+      <a class="card" href="project4.html">
+        <div class="big ok">04</div>
+        <div class="title">6팀 중 1위. 그런데 시작은 가족의 기침이었다.</div>
+        <div class="meta">Fresh Way 지하철 공기질 솔루션 · LG DX School BX · 기획 리드 · 최우수상</div>
+      </a>
+    </div>
+    <p class="dim mono" style="font-size:13px;">* 네 건 모두 동일 수법 — 관찰 → 검증 → 설계. 우연이 아니라 습관으로 판단됨.</p>
+  </section>
+
+  <!-- 숫자 증거 -->
+  <section class="sec">
+    <div class="k">EXHIBIT — 현장에서 수거된 숫자들</div>
+    <h2>말 대신 남겨진 것들.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="big cool">n=68</div>
+        <div class="cap">직접 설계해서 돌린 고객 설문. "나만 불편한가?"를 확인하기 위해.</div>
+      </div>
+      <div class="card">
+        <div class="big cool">6,500건</div>
+        <div class="cap">블로그·X 크롤링 → doc2vec → 군집 → LDA. 느낌을 데이터로 바꾼 흔적.</div>
+      </div>
+      <div class="card">
+        <div class="big acc">107개</div>
+        <div class="cap">직접 가입 설계를 받다가 세어본 건강보험 특약의 수. 모든 것의 시작.</div>
+      </div>
+      <div class="card">
+        <div class="big hot">1건</div>
+        <div class="cap">수상에 실패한 프로젝트. 삭제되지 않고 포트폴리오에 그대로 남아 있음. <span class="redact">이유는 FILE 03에.</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="nextbait wrap">
+  <div class="k">FILE 01 — 계속 보기</div>
+  <a href="project1.html"><div class="q">특약 107개를 앞에 두고, 이 사람은 왜 설문부터 돌렸을까?</div><div class="go">→ 보험 AI Agent 파일 열기</div></a>
+</section>
+
+</body>
+</html>
