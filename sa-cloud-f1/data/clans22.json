@@ -162,7 +162,7 @@
   "mark_front": "https://static.3rd.supply/marks/NTEvMV8yMV8wODY.png",
   "color": "#1250e5",
   "color_dark": "#032067",
-  "color_light": "#779bf0"
+  "color_light": "#779af0"
  },
  {
   "league": "IPL",
@@ -192,7 +192,7 @@
   "mark_front": "https://img.sa.nexon.com/sa/clan/mark/51/1_23_541.png",
   "color": "#32fc75",
   "color_dark": "#127131",
-  "color_light": "#8effb3"
+  "color_light": "#8effb4"
  },
  {
   "league": "IPL",
@@ -207,7 +207,7 @@
   "mark_front": "https://static.3rd.supply/marks/NTEvMV8yMV80MjA.png",
   "color": "#6332fc",
   "color_dark": "#291271",
-  "color_light": "#a98eff"
+  "color_light": "#aa8eff"
  },
  {
   "league": "IPL",
@@ -222,7 +222,7 @@
   "mark_front": "https://img.sa.nexon.com/sa/clan/mark/51/1_21_853.png",
   "color": "#9932fc",
   "color_dark": "#421271",
-  "color_light": "#c78eff"
+  "color_light": "#c88eff"
  },
  {
   "league": "IPL",
@@ -295,9 +295,9 @@
   "win_rate": 46.7,
   "mark_bg": "https://img.sa.nexon.com/sa/clan/mark/51/0_13_015.png",
   "mark_front": "https://img.sa.nexon.com/sa/clan/mark/51/1_22_117.png",
-  "color": "#cd32fc",
-  "color_dark": "#5b1271",
-  "color_light": "#e48eff"
+  "color": "#fc32c6",
+  "color_dark": "#711258",
+  "color_light": "#ff8ee1"
  },
  {
   "league": "IPL",
@@ -310,9 +310,9 @@
   "win_rate": 53.5,
   "mark_bg": "https://img.sa.nexon.com/sa/clan/mark/51/0_12_161.png",
   "mark_front": "https://img.sa.nexon.com/sa/clan/mark/51/1_24_395.png",
-  "color": "#d232fc",
-  "color_dark": "#5d1271",
-  "color_light": "#e78eff"
+  "color": "#fc32f8",
+  "color_dark": "#71126f",
+  "color_light": "#ff8efc"
  },
  {
   "league": "IPL",
@@ -325,8 +325,8 @@
   "win_rate": 49.6,
   "mark_bg": "https://static.3rd.supply/marks/NTEvMF8xMl8wMTY.png",
   "mark_front": "https://static.3rd.supply/marks/NTEvMV8yNF8zNDQ.png",
-  "color": "#d232fc",
-  "color_dark": "#5d1271",
-  "color_light": "#e78eff"
+  "color": "#fc3295",
+  "color_dark": "#711240",
+  "color_light": "#ff8ec5"
  }
 ]

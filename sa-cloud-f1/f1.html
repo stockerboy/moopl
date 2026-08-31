@@ -1,0 +1,71 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>SA CLOUD — CLAN GRAND PRIX</title>
+<style>
+  html,body { margin:0; background:#060505; overflow:hidden; }
+  canvas { display:block; }
+</style>
+<canvas id="c"></canvas>
+<script type="module">
+import { layout } from './src/hud.js'
+import { DURATION } from './src/core.js'
+import { simulate } from './src/race.js'
+import { render } from './src/scenes.js'
+
+const q = new URLSearchParams(location.search)
+const W = +(q.get('w') || 1080)
+const H = +(q.get('h') || 1920)
+
+const cv = document.getElementById('c')
+cv.width = W; cv.height = H
+cv.style.width = W + 'px'; cv.style.height = H + 'px'
+const ctx = cv.getContext('2d', { alpha: false })
+
+function loadImage(src) {
+  return new Promise(res => {
+    const im = new Image()
+    im.onload = () => res(im)
+    im.onerror = () => res(null)
+    im.src = src
+  })
+}
+
+const clans = await (await fetch('./data/clans22.json')).json()
+for (const c of clans) c.key = `${c.league}_${String(c.rank).padStart(2, '0')}`
+
+const marks = {}
+await Promise.all(clans.map(async c => {
+  const [bg, front] = await Promise.all([
+    loadImage(`./assets/marks/${c.key}_bg.png`),
+    loadImage(`./assets/marks/${c.key}_front.png`),
+  ])
+  marks[c.key] = { bg, front }
+}))
+
+// 글꼴이 준비되기 전에 그리면 폴백으로 캡처된다. 실제로 쓸 조합을 하나씩 기다린다.
+await document.fonts.ready
+await Promise.all([
+  '400 100px "Archivo Black"', '400 100px "Black Han Sans"',
+  '700 40px "Pretendard"', '700 40px "JetBrains Mono"', '700 40px "Chakra Petch"',
+].map(f => document.fonts.load(f, 'SA CLOUD 클랜 0123')))
+
+const race = simulate(clans)
+const S = { L: layout(W, H), clans, marks, race, W, H }
+
+window.DURATION = DURATION
+window.seek = (t) => { render(ctx, t, S); return true }
+window.frameJPEG = (t, q = 0.92) => { render(ctx, t, S); return cv.toDataURL('image/jpeg', q) }
+
+seek(+(q.get('t') || 0))
+window.__READY = true
+
+// 브라우저에서 열면 그냥 재생된다 (렌더에는 쓰이지 않는다)
+if (q.get('play') === '1') {
+  const t0 = performance.now()
+  const loop = () => {
+    const t = ((performance.now() - t0) / 1000) % DURATION
+    seek(t); requestAnimationFrame(loop)
+  }
+  requestAnimationFrame(loop)
+}
+</script>
